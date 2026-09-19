@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+
+# Environment variables and secrets (NEVER commit secrets to public repos)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Google Agents CLI local artifacts and session logs
+.google-agents-cli/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Testing & linting caches
+.pytest_cache/
+.coverage
+.coverage.*
+.hypothesis/
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Distribution & builds
+dist/
+build/
+*.egg-info/
