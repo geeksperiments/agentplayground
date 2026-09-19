@@ -60,7 +60,7 @@ To run agents in this playground, ensure you have:
 
 ```bash
 # 1. Clone the repository
-git clone git@github.com:whatevergeek/agentplayground.git
+git clone git@github.com:geeksperiments/agentplayground.git
 cd agentplayground/demo
 
 # 2. Configure environment (copy template)
