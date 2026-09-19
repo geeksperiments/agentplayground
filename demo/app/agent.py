@@ -22,11 +22,24 @@ from google.adk.models.lite_llm import LiteLlm
 from google.genai import types
 
 
+# ==============================================================================
+# 🔄 Model Configuration (Choose one backend)
+# ==============================================================================
+
+# Option 1: Local Antigravity CLI Proxy (agy-bridge)
 model = LiteLlm(
     model="openai/agy-gemini",
     api_base="http://127.0.0.1:8000/v1",
     api_key="none",
 )
+
+# Option 2: Local Ollama (100% offline on Apple Silicon GPU)
+# model = "ollama_chat/gemma4:12b-mlx"  # or "ollama_chat/qwen2.5-coder:14b"
+
+# Option 3: Direct Google Gemini Cloud API (requires GEMINI_API_KEY)
+# from google.adk.models import Gemini
+# model = Gemini(model="gemini-3.7-flash", retry_options=types.HttpRetryOptions(attempts=3))
+
 
 
 def get_weather(query: str) -> str:

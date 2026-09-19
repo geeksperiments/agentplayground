@@ -63,16 +63,20 @@ To run agents in this playground, ensure you have:
 git clone git@github.com:geeksperiments/agentplayground.git
 cd agentplayground/demo
 
-# 2. Configure environment (copy template)
+# 2. Configure environment
 cp .env.example .env
-# If using Gemini API, add your key to .env:
-# GEMINI_API_KEY="your-api-key-here"
 
 # 3. Install dependencies via uv
 agents-cli install
 
-# 4. Launch the interactive browser playground
+# 4. Choose your model backend in app/agent.py:
+#    - Option 1: Local Antigravity CLI Proxy (agy-bridge on port 8000 - default)
+#    - Option 2: Local Ollama (e.g., gemma4:12b-mlx or qwen2.5-coder:14b)
+#    - Option 3: Direct Google Gemini Cloud API (set GEMINI_API_KEY in .env)
+
+# 5. Launch the interactive browser playground
 agents-cli playground
+
 ```
 
 Open your browser at **`http://127.0.0.1:8080/dev-ui/?app=app`** to test and inspect the agent.
